@@ -16,10 +16,14 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@material-ui/core": "^4.9.11",
+    "@material-ui/icons": "^4.9.1",
+    "@mscharley/bs-material-ui-icons": "^1.0.2",
+    "@types/react": "^16.8.6",
     "bs-css": "^12.2.0",
     "bs-css-emotion": "^1.2.0",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1",
+    "react": "^16.8.0",
+    "react-dom": "^16.8.0",
     "reason-react": ">=0.7.0"
   },
   "devDependencies": {
