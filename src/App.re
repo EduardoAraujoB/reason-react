@@ -8,13 +8,11 @@ module Styles = {
       alignItems(center),
       height(vh(95.0)),
     ]);
-
-  let title = style([color(hex("#fff"))]);
 };
+
+let myList: list(string) = ["Item1", "Item2", "Item3"];
 
 [@react.component]
 let make = () => {
-  <div className=Styles.wrapper>
-    <h1 className=Styles.title> {ReasonReact.string("Hello World")} </h1>
-  </div>;
+  <div className=Styles.wrapper> <TodoList list_todo=myList /> </div>;
 };
