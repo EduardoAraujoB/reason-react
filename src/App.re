@@ -10,9 +10,7 @@ module Styles = {
     ]);
 };
 
-let myList: list(string) = ["Item1", "Item2", "Item3"];
-
 [@react.component]
 let make = () => {
-  <div className=Styles.wrapper> <TodoList list_todo=myList /> </div>;
+  <div className=Styles.wrapper> <TodoList /> </div>;
 };
