@@ -4,7 +4,7 @@ module Styles = {
   let wrapper =
     style([
       width(pct(100.0)),
-      background(hex("fff")),
+      background(hex("FFE3E3")),
       margin(px(10)),
       paddingLeft(px(5)),
       borderRadius(px(2)),

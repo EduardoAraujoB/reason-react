@@ -18,12 +18,15 @@ module Styles = {
 };
 
 [@react.component]
-let make = (~list_todo: list(string)) => {
+let make = () => {
+  let (todoList, setTodoList) = React.useState(() => []);
+
   <div className=Styles.wrapper>
     <h2 className=Styles.title> {React.string("Todo List")} </h2>
+    <AddTodo />
     {List.mapi(
        (key, todo) => <TodoItem key={key->string_of_int} todo />,
-       list_todo,
+       todoList,
      )
      ->Array.of_list
      ->ReasonReact.array}
