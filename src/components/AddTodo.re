@@ -31,9 +31,26 @@ module Styles = {
 
 [@react.component]
 let make = () => {
+  let (newTodo, setNewTodo) = React.useState(() => "");
+  let (_, dispatch) = TodoListContext.useTodoList();
+
+  let onChange = (e: ReactEvent.Form.t) => {
+    let value = e->ReactEvent.Form.target##value;
+    setNewTodo(value);
+  };
+
+  let handleClick = () => {
+    dispatch(AddTodo(newTodo));
+  };
+
   <div className=Styles.wrapper>
-    <input className=Styles.todoInput placeholder="Add Todo" />
-    <button className=Styles.addButton>
+    <input
+      className=Styles.todoInput
+      placeholder="Add Todo"
+      value=newTodo
+      onChange
+    />
+    <button className=Styles.addButton onClick={_ => handleClick()}>
       <MscharleyBsMaterialUiIcons.Add.Filled />
     </button>
   </div>;
