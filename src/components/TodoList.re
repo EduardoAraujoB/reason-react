@@ -18,9 +18,7 @@ module Styles = {
 };
 
 [@react.component]
-let make = () => {
-  let (todoList, setTodoList) = React.useState(() => []);
-
+let make = (~todoList) => {
   <div className=Styles.wrapper>
     <h2 className=Styles.title> {React.string("Todo List")} </h2>
     <AddTodo />
