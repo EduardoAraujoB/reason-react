@@ -1,0 +1,2 @@
+type todoAction =
+  | AddTodo(string);
