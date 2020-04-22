@@ -12,5 +12,8 @@ module Styles = {
 
 [@react.component]
 let make = () => {
-  <div className=Styles.wrapper> <TodoList /> </div>;
+  let (state, dispatch) = React.useReducer(TodoListReducer.reducer, []);
+  <TodoListProvider value=(state, dispatch)>
+    <div className=Styles.wrapper> <TodoList todoList=state /> </div>
+  </TodoListProvider>;
 };
