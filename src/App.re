@@ -7,6 +7,7 @@ module Styles = {
       justifyContent(center),
       alignItems(center),
       height(vh(95.0)),
+      padding(px(50)),
     ]);
 };
 

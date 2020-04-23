@@ -5,7 +5,7 @@ module Styles = {
     style([
       width(pct(100.0)),
       background(hex("FFE3E3")),
-      margin(px(10)),
+      marginTop(px(10)),
       paddingLeft(px(5)),
       borderRadius(px(2)),
     ]);
