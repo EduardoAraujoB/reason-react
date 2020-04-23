@@ -1,2 +1,3 @@
 type todoAction =
-  | AddTodo(string);
+  | AddTodo(string)
+  | RemoveTodo(string);
