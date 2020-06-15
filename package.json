@@ -6,13 +6,30 @@
     "start": "bsb -make-world -w -ws _ ",
     "clean": "bsb -clean-world",
     "server": "parcel ./public/index.html",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "bsb -make-world && jest"
   },
   "keywords": [
     "BuckleScript",
     "ReasonReact",
     "reason-react"
   ],
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/__mocks__/fileMock.js"
+    },
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "<rootDir>/lib/js/src/**/**.bs.js",
+      "!**/__tests__/**/*.test.(bs.js|.js|.re)"
+    ],
+    "coverageReporters": [
+      "text",
+      "lcov"
+    ],
+    "testMatch": [
+      "<rootDir>/lib/js/__tests__/**/*.bs.js"
+    ]
+  },
   "author": "",
   "license": "MIT",
   "dependencies": {
@@ -27,7 +44,10 @@
     "reason-react": ">=0.7.0"
   },
   "devDependencies": {
+    "@glennsl/bs-jest": "^0.5.1",
     "bs-platform": "^7.2.2",
+    "bs-react-testing-library": "^0.7.2",
+    "jest": "^26.0.1",
     "parcel-bundler": "^1.12.4"
   }
 }

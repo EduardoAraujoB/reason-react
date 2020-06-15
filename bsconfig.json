@@ -3,10 +3,17 @@
   "reason": {
     "react-jsx": 3
   },
-  "sources": {
-    "dir": "src",
-    "subdirs": true
-  },
+  "sources": [
+    {
+      "dir": "src",
+      "subdirs": true
+    },
+    {
+      "dir": "__tests__",
+      "subdirs": true,
+      "type": "dev"
+    }
+  ],
   "bsc-flags": ["-bs-super-errors", "-bs-no-version-header"],
   "package-specs": [
     {
@@ -22,5 +29,6 @@
     "bs-css-emotion",
     "@mscharley/bs-material-ui-icons"
   ],
+  "bs-dev-dependencies": ["@glennsl/bs-jest", "bs-react-testing-library"],
   "refmt": 3
 }
