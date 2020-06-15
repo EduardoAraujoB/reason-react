@@ -8,4 +8,5 @@ npm-debug.log
 /lib/js/
 /node_modules/
 /bundleOutput/
+/coverage/
 /.cache/
