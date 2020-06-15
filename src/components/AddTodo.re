@@ -50,7 +50,7 @@ let make = () => {
       value=newTodo
       onChange
     />
-    <button className=Styles.addButton onClick={_ => handleClick()}>
+    <button role="submit" className=Styles.addButton onClick={_ => handleClick()}>
       <MscharleyBsMaterialUiIcons.Add.Filled />
     </button>
   </div>;

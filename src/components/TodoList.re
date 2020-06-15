@@ -19,7 +19,7 @@ module Styles = {
 
 [@react.component]
 let make = (~todoList) => {
-  <div className=Styles.wrapper>
+  <div role="todo-list" className=Styles.wrapper>
     <h2 className=Styles.title> {React.string("Todo List")} </h2>
     <AddTodo />
     {List.mapi(

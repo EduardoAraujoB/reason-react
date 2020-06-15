@@ -26,7 +26,10 @@ let make = (~todo: string) => {
 
   <div className=Styles.wrapper>
     <p> {React.string(todo)} </p>
-    <button className=Styles.removeButton onClick={_ => handleClick()}>
+    <button
+      role={j|delete-$todo|j}
+      className=Styles.removeButton
+      onClick={_ => handleClick()}>
       <MscharleyBsMaterialUiIcons.Remove.Filled />
     </button>
   </div>;
